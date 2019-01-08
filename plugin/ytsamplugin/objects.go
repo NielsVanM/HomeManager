@@ -1,8 +1,8 @@
 package ytsamplugin
 
 import (
-	"nvmtech.nl/homemanager/database"
-	"nvmtech.nl/homemanager/tools/log"
+	"github.com/nielsvanm/homemanager/database"
+	"github.com/nielsvanm/homemanager/tools/log"
 )
 
 // Movie is a representation of the movie data

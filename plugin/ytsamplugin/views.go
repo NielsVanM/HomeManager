@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/gorilla/mux"
-	"nvmtech.nl/homemanager/frame"
+	"github.com/nielsvanm/homemanager/frame"
 )
 
 // APIEndpoints List of endpoints for the API

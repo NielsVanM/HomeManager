@@ -3,11 +3,11 @@ package views
 import (
 	"net/http"
 
-	"nvmtech.nl/homemanager/database"
+	"github.com/nielsvanm/homemanager/database"
 
 	"github.com/gorilla/mux"
-	"nvmtech.nl/homemanager/frame"
-	"nvmtech.nl/homemanager/plugin"
+	"github.com/nielsvanm/homemanager/frame"
+	"github.com/nielsvanm/homemanager/plugin"
 )
 
 // DatabaseView is an overview and management page for the database tables

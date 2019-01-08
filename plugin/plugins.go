@@ -1,8 +1,8 @@
 package plugin
 
 import (
-	"nvmtech.nl/homemanager/plugin/torrentplugin"
-	"nvmtech.nl/homemanager/plugin/ytsamplugin"
+	"github.com/nielsvanm/homemanager/plugin/torrentplugin"
+	"github.com/nielsvanm/homemanager/plugin/ytsamplugin"
 )
 
 // PluginList is a collection of all registered plugins

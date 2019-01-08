@@ -1,6 +1,6 @@
 package torrentplugin
 
-import "nvmtech.nl/homemanager/database"
+import "github.com/nielsvanm/homemanager/database"
 
 func UpdateTorrents() []database.BatchQuery {
 	return nil

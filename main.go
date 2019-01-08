@@ -5,11 +5,11 @@ import (
 	"os"
 	"strings"
 
-	"nvmtech.nl/homemanager/database"
-	"nvmtech.nl/homemanager/frame"
-	"nvmtech.nl/homemanager/plugin"
-	"nvmtech.nl/homemanager/tools/log"
-	"nvmtech.nl/homemanager/views"
+	"github.com/nielsvanm/homemanager/database"
+	"github.com/nielsvanm/homemanager/frame"
+	"github.com/nielsvanm/homemanager/plugin"
+	"github.com/nielsvanm/homemanager/tools/log"
+	"github.com/nielsvanm/homemanager/views"
 )
 
 var serverPort = 8080

@@ -3,7 +3,7 @@ package views
 import (
 	"net/http"
 
-	"nvmtech.nl/homemanager/frame"
+	"github.com/nielsvanm/homemanager/frame"
 )
 
 // DashboardView is the main index page of the site

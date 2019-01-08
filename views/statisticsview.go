@@ -6,11 +6,11 @@ import (
 	"runtime"
 	"strconv"
 
-	"nvmtech.nl/homemanager/plugin"
-	"nvmtech.nl/homemanager/tools"
-	"nvmtech.nl/homemanager/tools/log"
+	"github.com/nielsvanm/homemanager/plugin"
+	"github.com/nielsvanm/homemanager/tools"
+	"github.com/nielsvanm/homemanager/tools/log"
 
-	"nvmtech.nl/homemanager/frame"
+	"github.com/nielsvanm/homemanager/frame"
 )
 
 func StatisticsView(w http.ResponseWriter, r *http.Request) {

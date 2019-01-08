@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"nvmtech.nl/homemanager/tools/log"
+	"github.com/nielsvanm/homemanager/tools/log"
 )
 
 // LogHTTP logs the http request to the console

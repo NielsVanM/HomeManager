@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"strconv"
 
-	"nvmtech.nl/homemanager/middleware"
+	"github.com/nielsvanm/homemanager/middleware"
 
 	"github.com/gorilla/mux"
-	"nvmtech.nl/homemanager/tools/log"
+	"github.com/nielsvanm/homemanager/tools/log"
 )
 
 // WebServer is an object responsible for

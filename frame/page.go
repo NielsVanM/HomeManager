@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	"nvmtech.nl/homemanager/tools/log"
+	"github.com/nielsvanm/homemanager/tools/log"
 )
 
 // TemplateFolder is the folder where the templates are located,

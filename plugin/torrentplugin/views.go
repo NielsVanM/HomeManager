@@ -7,11 +7,11 @@ import (
 	"os"
 	"strings"
 
-	"nvmtech.nl/homemanager/tools"
+	"github.com/nielsvanm/homemanager/tools"
 
 	"github.com/lnguyen/go-transmission/transmission"
-	"nvmtech.nl/homemanager/frame"
-	"nvmtech.nl/homemanager/tools/log"
+	"github.com/nielsvanm/homemanager/frame"
+	"github.com/nielsvanm/homemanager/tools/log"
 )
 
 var tmClient = transmission.New("http://localhost:9091", "", "")

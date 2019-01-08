@@ -5,11 +5,11 @@ import (
 	"os"
 	"strings"
 
-	"nvmtech.nl/homemanager/database"
-	"nvmtech.nl/homemanager/frame"
+	"github.com/nielsvanm/homemanager/database"
+	"github.com/nielsvanm/homemanager/frame"
 
-	"nvmtech.nl/homemanager/tools"
-	"nvmtech.nl/homemanager/tools/log"
+	"github.com/nielsvanm/homemanager/tools"
+	"github.com/nielsvanm/homemanager/tools/log"
 )
 
 // PluginManager is the app-wide plugin management object

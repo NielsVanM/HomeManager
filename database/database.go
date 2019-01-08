@@ -7,7 +7,7 @@ import (
 	// Import PQ for the sql package
 	_ "github.com/lib/pq"
 
-	"nvmtech.nl/homemanager/tools/log"
+	"github.com/nielsvanm/homemanager/tools/log"
 )
 
 var Database *DB
