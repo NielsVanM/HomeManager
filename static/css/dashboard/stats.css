@@ -1,0 +1,17 @@
+.card {
+    width: 18rem;
+    height: auto;
+    margin: 0px 1em;
+}
+
+.card .card-title {
+    font-size: 2rem;
+}
+
+.card .value {
+    font-size: 5.99rem;
+}
+
+.card .card-title, .card .value {
+    text-align: center;
+}

@@ -1,0 +1,48 @@
+
+.movie-container {
+    position: relative;
+}
+
+.movie-container img {
+    display: block;
+    width: 12em;
+    height: auto;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.movie-container .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+/* When you mouse over the container, fade in the overlay icon*/
+.movie-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.overlay .info {
+    color: white;
+    font-size: 24px;
+    margin-left: 1em;
+}
+
+label {
+    text-align: center;
+}

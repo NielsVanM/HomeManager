@@ -1,0 +1,74 @@
+{{ define "custom_css" }}
+<link rel="stylesheet" href="/static/css/plugins/ytsamplugin/movieoverview.css">
+{{ end }}
+
+{{ define "content" }}
+<div class="container-fluid">
+    <div class="row">
+        <a name="back-overview" id="back-overview" class="btn btn-dark" href="/ytsamplugin/" role="button">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            Back to overview</a>
+    </div>
+    <div class="row">
+        {{ with .movie }}
+        <div class="col-4">
+            <img src="{{.CoverImage}}" alt="">
+        </div>
+        <div class="col-6">
+            <h1>{{.Title}}</h1>
+            <h2>
+                {{ if .Description }}
+                    {{.Description}}
+                {{ else }}
+                    No description provided.
+                {{ end }}
+            </h2>
+            <br>
+            <h2>
+                <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+                {{.Year}}
+            </h2>
+            <h2>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                {{.Rating}}
+            </h2>
+            <h2>
+                <i class="fa fa-clock" aria-hidden="true"></i>
+                {{.Length}} Minutes
+            </h2>
+            {{ end }}
+            <h2>
+                <i class="fa fa-tags" aria-hidden="true"></i>
+                {{ .genres }}
+            </h2>
+            <br><br>
+            <div class="container-fluid">
+                <div class="row">
+                    {{ range .torrents }}
+                    <div class="col-6">
+                        <div id="memory" class="card text-white bg-dark">
+                            <div class="card-body">
+                                <h3 class="card-title">Download {{.Quality}}</h3>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <h5>Type: {{.Type}}</h5>
+                                            <h5>Size: {{.Size}}</h5>
+                                        </div>
+                                        <div class="col-2">
+                                            <a href="/ytsamplugin/torrent/{{.ID}}/">
+                                                <i class="fa fa-download" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

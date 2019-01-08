@@ -1,0 +1,70 @@
+{{ define "custom_css"}}
+
+{{ end }}
+
+{{ define "content"}}
+<div class="container-fluid">
+
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Plugin Name</th>
+                    <th>Plugin Description</th>
+                    <th>Plugin Category</th>
+                    <th>Tables</th>
+                    <th width="1em;"></th>
+                    <th width="1em;"></th>
+                    <th width="1em;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range .plugins }}
+                <tr>
+                    <td>{{ .Name }}</td>
+                    <td>{{ .Description }}</td>
+                    <td>{{ .Category }}</td>
+                    <td>
+                        {{ range .Tables }}
+                        {{ . }} <br>
+                        {{ end }}
+                    </td>
+                    <td>
+                        <form action="/database/create/{{.Name}}/" method="get">
+                            <button type="submit-ajax" class="btn btn-success">Create</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/database/truncate/{{.Name}}/" method="get">
+                            <button type="submit-ajax" class="btn btn-warning">Truncate</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/database/drop/{{.Name}}/" method="get">
+                            <button type="submit-ajax" class="btn btn-danger">Drop</button>
+                        </form>
+                    </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    var target = $("button[type='submit-ajax']")
+    target.on('click', function (e) {
+        e.preventDefault()
+        $.ajax({
+            url: target.parent("form").attr("action"),
+            method: "GET",
+            success: function (res) {
+
+            },
+            error: function (res) {
+                console.log(res.statusText)
+            }
+        })
+    })
+</script>
+{{ end }}

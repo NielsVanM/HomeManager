@@ -1,0 +1,11 @@
+{{ range .movies }}
+<a href="/ytsamplugin/view/{{.ID}}/"  class="movie-container">
+    <img async src="{{ .CoverImage }}" alt="Cover image for {{.Title}}">
+    <div class="overlay">
+        <span class="title">{{.Title}}</span><br>
+        <span class="info">Rating: {{.Rating}}</span><br>
+        <span class="info">Year: {{.Year}}</span><br>
+        <span class="info">Duration: {{.Length}}</span><br>
+    </div>
+</a>
+{{ end }}

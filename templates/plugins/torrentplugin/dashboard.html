@@ -1,0 +1,33 @@
+{{ define "custom_css" }}
+{{ end }}
+
+{{ define "content" }}
+<div class="container-fluid">
+
+    <div class="row">
+        <!-- Manage plugin buttons -->
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Percent Done</th>
+                    <th>Download Speed</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range .torrents }}
+                <tr id="{{.ID}}">
+                    <td scope="row">{{.Name}}</td>
+                    <td>{{.Status}}</td>
+                    <td>{{.PercentDone}}%</td>
+                    <td>{{.DownloadDir}}ps</td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+</div>
+    {{ end }}

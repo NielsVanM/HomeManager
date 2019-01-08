@@ -1,0 +1,62 @@
+{{ define "custom_css" }}
+<link rel="stylesheet" href="/static/css/dashboard/stats.css">
+{{ end }}
+
+{{ define "content" }}
+<div class="row">
+
+    <div id="processor_count" class="card text-white bg-dark">
+        <div class="card-body">
+            <h5 class="card-title">Processor Cores</h5>
+            <h2 class="value">~</h2>
+            <p class="card-text">Amount of processor cores available to the software.</p>
+        </div>
+    </div>
+
+    <div id="memory" class="card text-white bg-dark">
+        <div class="card-body">
+            <h5 class="card-title">Memory Used</h5>
+            <h2 class="value">~</h2>
+            <p class="card-text">Amount of memory currently in use by the software.</p>
+        </div>
+    </div>
+    <div id="plugin" class="card text-white bg-dark">
+        <div class="card-body">
+            <h5 class="card-title">Plugins Registered</h5>
+            <h2 class="value">~</h2>
+            <p class="card-text">Amount of plugins that have been registered by the software.</p>
+        </div>
+    </div>
+    <div id="log" class="card text-white bg-dark">
+            <div class="card-body">
+                <h5 class="card-title">Log file size</h5>
+                <h2 class="value">~</h2>
+                <p class="card-text">Size of the log file</p>
+            </div>
+        </div>
+</div>
+
+<script>
+    function GetValue(name, target) {
+        $.ajax({
+            url: "/stats/" + name + "/",
+            method: "GET",
+            success: function (res) {
+                $(target + " .value").html(res)
+            },
+            error: function (res) {
+                console.log("Failed to get: " + name)
+            }
+        })
+    }
+
+    GetValue("processorcount", "#processor_count")
+    GetValue("plugincount", "#plugin")
+    GetValue("memory", "#memory")
+    GetValue("logsize", "#log")
+    window.setInterval(function () { 
+        GetValue("memory", "#memory")
+        GetValue("logsize", "#log") 
+        }, 1000)
+</script>
+{{ end }}
