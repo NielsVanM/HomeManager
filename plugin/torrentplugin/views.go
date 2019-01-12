@@ -30,6 +30,9 @@ func DashboardView(w http.ResponseWriter, r *http.Request) {
 	torrents, err := tmClient.GetTorrents()
 	if err != nil {
 		log.Warn("TorrentPlugin", "Failed to get torrents from transmission", err.Error())
+
+		page.AddContext("error", "Failed to connect to transmission, is it online?")
+		page.Render(w)
 		return
 	}
 
